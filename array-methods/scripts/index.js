@@ -108,16 +108,15 @@
 
 
 /** ==================================================================================================================================================================================*/
+/** Iterate: forEach */
 
-//Iterate: forEach
-
-/**
- * forEach
- * @description allows to run a function for every element of the array
- * @syntax arr.forEach(function(item, index, array) {
- *             // ... do something with item
- *         });
- */
+// /**
+//  * forEach
+//  * @description allows to run a function for every element of the array
+//  * @syntax arr.forEach(function(item, index, array) {
+//  *             // ... do something with item
+//  *         });
+//  */
 //
 // const array = ['Thor Odinson', 'Bruce Banner', 'Natasha Romanoff', 'Tony Stark'];
 //
@@ -129,8 +128,7 @@
 
 
 /** ==================================================================================================================================================================================*/
-
-// Searching in array
+/** Searching in array */
 
 // /**
 //  * indexOf/lastIndexOf and includes
@@ -209,3 +207,90 @@
 // ];
 //
 // console.log(array.filter(hero => hero.place === 'New York'));
+
+
+/** ==================================================================================================================================================================================*/
+/** Transform an array */
+
+// /**
+//  * split/join
+//  * @syntax split(separator, limit) || join(separator)
+//  */
+//
+// const array = ['Thor Odinson', 'Bruce Banner', 'Natasha Romanoff', 'Tony Stark'];
+// const string = 'Thor Odinson, Bruce Banner, Natasha Romanoff, Tony Stark';
+//
+// console.log("string.split(): ", string.split()); // array with 1 element
+// console.log('string.split(\'\'): ', string.split('')); // split on characters
+// console.log('string.split(\'\', 4): ', string.split('', 4)); // first 4 elements
+// console.log('string.split(\'Amazing separator\', 4): ', string.split('Amazing separator', 4)); // return full array
+// console.log('string.split(\', \'): ', string.split(', ')); // return full array
+//
+// console.log('array.join(\' \'): ', array.join(' '))
+
+
+
+// /**
+//  * reverse - reverses the order of elements in arr
+//  * @syntax reverse();
+//  * @returns  the array after the reversal.
+//  */
+//
+// const array = [1, 2, 3, 4, 5, 6];
+// const reversedArray = array.reverse();
+// console.log('reversedArray: ', reversedArray);
+// console.log('array: ', array);
+//
+// reversedArray.push('One more elem');
+
+
+// /**
+//  * map - creates a new array populated with the results of calling a provided function on every element in the calling array
+//  * @syntax map((element, index, array) => { ... } );
+//  */
+//
+// const array = ['Thor Odinson', 'Bruce Banner', 'Natasha Romanoff', 'Tony Stark'];
+//
+// const newArray = array.map((hero, index) => {
+//     const nameArray = hero.split(' ');
+//     return ({
+//         firstName: nameArray[0],
+//         lastName: nameArray[1],
+//         id: index,
+//     })
+// });
+//
+// console.log('newArray: ', newArray);
+
+
+
+/**
+ * sort - sorts the elements of an array in place and returns the sorted array.
+ * @syntax sort((firstEl, secondEl) => { ... } )
+ */
+
+
+const array = [1, 6, 54, 3, 323, 54, 2, 23];
+
+const callback = (firstElement, secondElement) => {
+    if (firstElement < secondElement) return -1
+    else if (firstElement == secondElement) return 0
+    else if (firstElement > secondElement) return 1
+}
+
+const sortedArray = array.sort(callback);
+
+console.log('sortedArray: ', sortedArray);
+console.log('array: ', array);
+
+
+
+
+const stringArray = ['Thor Odinson', 'Bruce Banner', 'Natasha Romanoff', 'Tony Stark'];
+const lettersArray = ['b', 'B', 'a', 'c', 'e', 'd', 'f', 'A', 'C', 'F', 'ab', 'cd', 'Ben Jhonson', 'Don\'t lose yourself, don\'t lose who you really are and what really matters to you!', 'aaa', 'bbb', 'aAb'];
+
+console.log(lettersArray.sort((a, b) => a < b ? -1 : 1));
+console.log(lettersArray.sort((a, b) => a.localeCompare(b)));
+console.log(lettersArray.sort((a, b) => b.localeCompare(a)));
+
+

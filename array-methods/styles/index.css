@@ -36,6 +36,8 @@ li:hover {
     cursor: pointer;
     box-shadow: 0 0 10px grey;
     border-color: #1ecaab;
+    transform: translateY(5px);
+    transition: transform .2s ease;
 }
 
 .number {

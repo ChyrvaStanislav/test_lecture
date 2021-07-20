@@ -64,7 +64,12 @@ const employees = [
 
 
 
-//
+
+// /**
+//  *
+//  * @param nameOrId {string|number}
+//  * @param newEmployer {Object}
+//  */
 // const updateEmployees = (nameOrId, newEmployer = null) => {
 //     let index = null;
 //

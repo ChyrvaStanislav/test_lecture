@@ -113,25 +113,29 @@ const employees = [
 
 
 
-const sortedArray = employees.sort((a, b) => a.id - b.id);
-const filteredArray = sortedArray.filter(item => !item.isOnVacation);
-
-const htmlArray = filteredArray.map((employer, index) => {
-    return `
-        <li>
-        <p class="number">${index}</p>
-        <img class="avatar" src="${employer.avatar}" alt="${employer.name} avatar">
-        <p class="name">${employer.name}</p>
-        <p class="position">${employer.position}</p>
-        <p class="age">Age: ${employer.age}</p>
-        <p class="id">id: ${employer.id}</p>
-        </li>
-    `
-})
-
-const render = (html) => {
-    const container = document.querySelector('#container');
-    container.innerHTML = html.join(' ');
-}
-
-render(htmlArray);
+// const sortedArray = employees.sort((a, b) => a.id - b.id);
+//
+// const filteredArray = sortedArray.filter(item => !item.isOnVacation);
+//
+// const htmlArray = filteredArray.map((employer, index) => {
+//     return `
+//         <li>
+//         <p class="number">${index}</p>
+//         <img class="avatar" src="${employer.avatar}" alt="${employer.name} avatar">
+//         <p class="name">${employer.name}</p>
+//         <p class="position">${employer.position}</p>
+//         <p class="age">Age: ${employer.age}</p>
+//         <p class="id">id: ${employer.id}</p>
+//         </li>
+//     `
+// })
+//
+// /**
+//  * @param htmlArray {[String]}
+//  */
+// const render = (htmlArray) => {
+//     const container = document.querySelector('#container');
+//     container.innerHTML = htmlArray.join(' ');
+// }
+//
+// render(htmlArray);

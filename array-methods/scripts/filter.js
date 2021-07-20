@@ -1,7 +1,8 @@
 /*
-Напишите функцию которая находит в массиве постов объект по полю "title" и добавляет к нему поле "read" с значением true;
+Напишите функцию которая находит в массиве объект поста по полю "title" и добавляет к нему поле "isRead" с значением true;
 Если объект не найден - функция показывает на экран сообщение об ошибке;
-Напишите функцию которая выводит в консоль список всех прочитанных постов;
+Напишите функцию которая принимает аргумент isRead {boolean} и выводит в консоль список всех прочитанных постов если isRead = true
+и список непрочитанных если isRead = false;
  */
 
 const posts = [
@@ -636,33 +637,30 @@ const posts = [
 
 
 
-
-
-
-
-
-
-
-
-
-// const readPost = (title) => {
-//    const index = posts.findIndex((post) => post.title === title);
+// /**
+//  * @param title {String}
+//  */
+// const isReadPost = (title) => {
+//     const index = posts.findIndex((post) => post.title === title);
 //
 //    if (index < 0) {
 //        alert(`Пост "${title}" не найден`);
 //    } else {
-//        posts[index].read = true;
+//        posts[index].isRead = true;
 //    }
 // };
 //
-// const logReadPosts = () => {
-//     const readArray = posts.filter(post => post.read);
-//     readArray.forEach(post => console.log(post));
+// /**
+//  * @param isRead {Boolean}
+//  */
+// const logPosts = (isRead = false) => {
+//     const isReadArray = posts.filter(post => isRead ? post.isRead : !post.isRead);
+//     isReadArray.forEach(post => console.log(post));
 // }
 //
-// readPost('magnam facilis autem');
-// readPost('necessitatibus quasi exercitationem odio');
-// readPost('aut amet sed');
-// readPost('ausdfs sdfs sdfed');
+// isReadPost('magnam facilis autem');
+// isReadPost('necessitatibus quasi exercitationem odio');
+// isReadPost('aut amet sed');
+// isReadPost('ausdfs sdfs sdfed');
 //
-// logReadPosts();
+// logPosts(true);
