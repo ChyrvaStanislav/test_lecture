@@ -264,33 +264,33 @@
 
 
 
-/**
- * sort - sorts the elements of an array in place and returns the sorted array.
- * @syntax sort((firstEl, secondEl) => { ... } )
- */
-
-
-const array = [1, 6, 54, 3, 323, 54, 2, 23];
-
-const callback = (firstElement, secondElement) => {
-    if (firstElement < secondElement) return -1
-    else if (firstElement == secondElement) return 0
-    else if (firstElement > secondElement) return 1
-}
-
-const sortedArray = array.sort(callback);
-
-console.log('sortedArray: ', sortedArray);
-console.log('array: ', array);
-
-
-
-
-const stringArray = ['Thor Odinson', 'Bruce Banner', 'Natasha Romanoff', 'Tony Stark'];
-const lettersArray = ['b', 'B', 'a', 'c', 'e', 'd', 'f', 'A', 'C', 'F', 'ab', 'cd', 'Ben Jhonson', 'Don\'t lose yourself, don\'t lose who you really are and what really matters to you!', 'aaa', 'bbb', 'aAb'];
-
-console.log(lettersArray.sort((a, b) => a < b ? -1 : 1));
-console.log(lettersArray.sort((a, b) => a.localeCompare(b)));
-console.log(lettersArray.sort((a, b) => b.localeCompare(a)));
+// /**
+//  * sort - sorts the elements of an array in place and returns the sorted array.
+//  * @syntax sort((firstEl, secondEl) => { ... } )
+//  */
+//
+//
+// const array = [1, 6, 54, 3, 323, 54, 2, 23];
+//
+// const callback = (firstElement, secondElement) => {
+//     if (firstElement < secondElement) return -1
+//     else if (firstElement == secondElement) return 0
+//     else if (firstElement > secondElement) return 1
+// }
+//
+// const sortedArray = array.sort(callback);
+//
+// console.log('sortedArray: ', sortedArray);
+// console.log('array: ', array);
+//
+//
+//
+//
+// const stringArray = ['Thor Odinson', 'Bruce Banner', 'Natasha Romanoff', 'Tony Stark'];
+// const lettersArray = ['b', 'B', 'a', 'c', 'e', 'd', 'f', 'A', 'C', 'F', 'ab', 'cd', 'Ben Jhonson', 'Don\'t lose yourself, don\'t lose who you really are and what really matters to you!', 'aaa', 'bbb', 'aAb'];
+//
+// console.log(lettersArray.sort((a, b) => a < b ? -1 : 1));
+// console.log(lettersArray.sort((a, b) => a.localeCompare(b)));
+// console.log(lettersArray.sort((a, b) => b.localeCompare(a)));
 
 
